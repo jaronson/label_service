@@ -1,0 +1,66 @@
+Integration:
+1. Copy the config file from vendor/plugins/label_service/lib/label_service.yml to RAILS_ROOT/config/. The config file can be set with a number of default values.
+2. Create the label images directory at public/images/shipping_labels
+	Optional:
+	1. Subclass a model to provide easier access to the LabelRequest class (i.e. class Label < LabelService::LabelRequest;end;)
+	2. Include the LabelService classes in your rails application
+
+Example usage:
+
+- Create new label request
+	label_request = LabelService::LabelRequest.new(:weight => 2, :recipient_address_1 => "123 Fake St.", ...)
+	=> #<LabelService::LabelRequest:0x23f3ae8 @weight=2, @recipient_address_1="123 Fake St.", ...>
+
+- If the request is valid, i.e. all required values are present, send to UPS
+	label_response = label_request.post
+	=> #<LabelService::LabelResponse:0x23d4300 @tracking_number="1Z47596R0398017121", @image_filename="1Z47596R0398017121.gif", @image=#<File:public/images/shipping_labels/1Z47596R0398017121.gif>
+
+- After the response, a label image will be created in the shipping_labels directory. 
+- it will be named {tracking_number}.gif
+
+Available methods:
+
+LabelService::Base
+	post (alias for request)
+	request
+	to_xml (formatted for UPS SOAP API)
+	valid?
+	errors
+	config (from the label_service.yml file)
+
+LabelService::LabelRequest
+	recipient_company
+	recipient_name
+	recipient_phone
+	recipient_email
+	recipient_address_1
+	recipient_city
+	recipient_state
+	recipient_zip_code
+	recipient_country
+	
+	sender_company
+	sender_name
+	sender_phone
+	sender_email
+	sender_address_1
+	sender_city
+	sender_state
+	sender_zip_code
+	sender_country
+	
+	weight
+	package_total
+	packaging_type
+	service_type_code
+	service_type_description
+	recipient_date
+	dropoff_type
+	currency_code
+	
+LabelService::LabelResponse
+	tracking_number
+	encoded_image
+	image
+	image_filename
+	image_url

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccessRequest xml:lang="en-US">
+    <AccessLicenseNumber>0C3F4884C0E2C0C4</AccessLicenseNumber>
+    <UserId>johnml</UserId>
+    <Password>food13</Password>
+</AccessRequest>
+<?xml version="1.0" encoding="UTF-8"?>
+<VoidShipmentRequest>
+    <Request>
+        <TransactionReference>
+            <CustomerContext>1Z12345E1290420899</CustomerContext>
+        </TransactionReference>
+        <RequestAction>Void</RequestAction>
+        <XcpiVersion></XcpiVersion>
+    </Request>
+    <ExpandedVoidShipment>
+        <ShipmentIdentificationNumber>1Z12345E1290420899</ShipmentIdentificationNumber>
+    </ExpandedVoidShipment>
+</VoidShipmentRequest>

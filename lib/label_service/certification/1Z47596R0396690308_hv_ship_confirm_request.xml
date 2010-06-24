@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccessRequest xml:lang="en-US">
+    <AccessLicenseNumber>0C3F4884C0E2C0C4</AccessLicenseNumber>
+    <UserId>johnml</UserId>
+    <Password>food13</Password>
+</AccessRequest>
+<?xml version="1.0" encoding="UTF-8"?>
+<ShipmentConfirmRequest>
+    <LabelSpecification>
+        <HTTPUserAgent>Mozilla/5.0</HTTPUserAgent>
+        <LabelPrintMethod>
+            <Code>GIF</Code>
+            <Description>gif file</Description>
+        </LabelPrintMethod>
+        <LabelImageFormat>
+            <Code>GIF</Code>
+            <Description>gif</Description>
+        </LabelImageFormat>
+    </LabelSpecification>
+    <Shipment>
+        <PaymentInformation>
+            <Prepaid>
+                <BillShipper>
+                    <AccountNumber>47596r</AccountNumber>
+                </BillShipper>
+            </Prepaid>
+        </PaymentInformation>
+        <ShipTo>
+            <CompanyName>terracycle.com</CompanyName>
+            <AttentionName></AttentionName>
+            <Address>
+                <City>Franklin</City>
+                <CountryCode>US</CountryCode>
+                <PostalCode>37065</PostalCode>
+                <AddressLine1>405 N Petway</AddressLine1>
+                <StateProvinceCode>TN</StateProvinceCode>
+            </Address>
+        </ShipTo>
+        <Dimensions>
+            <UnitOfMeasurement>
+                <Code>IN</Code>
+            </UnitOfMeasurement>
+            <Length></Length>
+            <Height></Height>
+            <Width></Width>
+        </Dimensions>
+        <Service>
+            <Code>03</Code>
+            <Description>Ground</Description>
+        </Service>
+        <Shipper>
+            <Name>terracycle.com</Name>
+            <ShipperNumber>47596r</ShipperNumber>
+            <Address>
+                <City>Murfreesboro</City>
+                <CountryCode>US</CountryCode>
+                <PostalCodeExtendedLow></PostalCodeExtendedLow>
+                <PostalCode>37130</PostalCode>
+                <AddressLine1>105 4th Ave</AddressLine1>
+                <StateProvinceCode>TN</StateProvinceCode>
+            </Address>
+        </Shipper>
+        <Package>
+            <AdditionalHandling>0</AdditionalHandling>
+            <PackagingType>
+                <Code>02</Code>
+                <Description>Customer Supplied</Description>
+            </PackagingType>
+            <Dimensions>
+                <UnitOfMeasurement>IN</UnitOfMeasurement>
+                <Length>0</Length>
+                <Height>0</Height>
+                <Width>0</Width>
+            </Dimensions>
+            <Description>Package Description</Description>
+            <PackageWeight>
+                <Weight>2</Weight>
+                <UnitOfMeasurement>
+                    <Code>LBS</Code>
+                </UnitOfMeasurement>
+            </PackageWeight>
+        </Package>
+        <ShipFrom>
+            <CompanyName>terracycle.com</CompanyName>
+            <PhoneNumber>18001234567</PhoneNumber>
+            <AttentionName></AttentionName>
+            <TaxIdentificationNumber>123456789</TaxIdentificationNumber>
+            <Address>
+                <City>Murfreesboro</City>
+                <CountryCode>US</CountryCode>
+                <PostalCode>37130</PostalCode>
+                <AddressLine1>105 4th Ave</AddressLine1>
+                <StateProvinceCode>TN</StateProvinceCode>
+            </Address>
+        </ShipFrom>
+        <Description></Description>
+        <PackageServiceOptions>
+            <InsuredValue>
+                <MonetaryValue>999</MonetaryValue>
+                <CurrencyCode>US</CurrencyCode>
+            </InsuredValue>
+        </PackageServiceOptions>
+    </Shipment>
+    <Request>
+        <TransactionReference>
+            <CustomerContext></CustomerContext>
+        </TransactionReference>
+        <RequestOption>validate</RequestOption>
+        <RequestAction>ShipConfirm</RequestAction>
+        <XcpiVersion></XcpiVersion>
+    </Request>
+</ShipmentConfirmRequest>

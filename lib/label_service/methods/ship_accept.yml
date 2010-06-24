@@ -1,0 +1,7 @@
+shipment_accept_request: 
+  request: 
+    transaction_reference: 
+      customer_context: "'NIL'"
+    request_action: request_action
+    request_option: "'1'"
+  shipment_digest: shipment_digest

@@ -1,0 +1,9 @@
+void_shipment_request:
+  request:
+    transaction_reference:
+      customer_context: shipment_number 
+    xcpi_version: "''" 
+    request_action: request_action
+  expanded_void_shipment:
+    shipment_identification_number: shipment_number
+    tracking_numbers: [] 

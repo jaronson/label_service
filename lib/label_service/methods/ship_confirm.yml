@@ -1,0 +1,100 @@
+# The values below map the ShipConfirm class to UPS's
+# ShipConfirm SOAP method
+#
+# LabelService::Base's to_xml method will uses this file
+# the keys will be camelized: 
+# shipment_confirm_request //--> ShipmentConfirmRequest .
+# Values are expected to be 
+# instance methods (@sender_zip_code)
+# class.config methods (class.config.api_version)
+# in that order. They can also be string literals, in order to 
+# set default values
+# Note: string literals need to be escaped twice, i.e. "'NIL'"
+
+shipment_confirm_request: 
+    request: 
+        transaction_reference: 
+          customer_context: transaction_reference 
+        xcpi_version: "''" 
+        request_action: request_action
+        request_option: "'nonvalidate'" 
+    shipment: 
+      description: "'NULL'" 
+      rate_information: 
+      return_service: 
+        code: return_service
+      shipper: 
+        shipper_number: service_shipper_number
+        phone_number: "'9084511357'"
+        name: sender_name 
+        attention_name: sender_name 
+        address: 
+          address_line_1: sender_address_1
+          postal_code: sender_zip_code
+          postal_code_extended_low: "''"
+          country_code: sender_country
+          city: sender_city
+          state_province_code: sender_state
+      ship_from: 
+        company_name: sender_company
+        name: sender_name 
+        attention_name: sender_name 
+        phone_number: "'9084511357'"
+        tax_identification_number: "'123456789'"
+        address: 
+          address_line_1: sender_address_1
+          postal_code: sender_zip_code
+          country_code: sender_country
+          city: sender_city
+          state_province_code: sender_state
+      ship_to: 
+        company_name: recipient_company
+        attention_name: recipient_name
+        phone_number: "'9084511357'"
+        address: 
+          address_line_1: recipient_address_1
+          postal_code: recipient_zip_code
+          country_code: recipient_country
+          city: recipient_city
+          state_province_code: recipient_state
+      payment_information: 
+        prepaid: 
+          bill_shipper: 
+            account_number: service_shipper_number
+      service: 
+        code: service_type_code
+        description: service_type_description
+      package:
+        reference_numbers: [] #Array method
+        description: description
+        packaging_type: 
+          code: packaging_type
+          description: "'Customer Supplied'"
+        dimensions: 
+          unit_of_measurement: "'IN'"
+          length: "'0'"
+          width: "'0'"
+          height: "'0'"
+        additional_handling: "'0'"
+        package_weight: 
+          weight: weight
+          unit_of_measurement: 
+            code: "'LBS'"
+      dimensions: 
+        unit_of_measurement: 
+          code: "'IN'"
+        length: length
+        width: width
+        height: height
+      package_service_options: 
+        insured_value: 
+          currency_code: "'US'"
+          monetary_value: insured_value
+    label_specification: 
+      label_print_method: 
+        code: "'GIF'"
+        description: "'gif file'"
+      HTTPUserAgent: "'Mozilla/5.0'"
+      label_image_format: 
+        code: "'GIF'"
+        description: "'gif'"
